@@ -35,11 +35,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 chsh -s "$(which zsh)"
 
 # Install Powerlevel10k
-echo "Installing Powerlevel10k..."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
+#echo "Installing Powerlevel10k..."
+#git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
 
 # Update .zshrc to use powerlevel10k
-sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
+#sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 
 # Prevent zsh first-time setup message
 touch ~/.zshrc.pre-oh-my-zsh
@@ -47,5 +47,9 @@ touch ~/.zshrc.pre-oh-my-zsh
 # Prevent i3 config generation prompt
 mkdir -p ~/.config/i3
 touch ~/.config/i3/config
+
+# Install starship
+echo "Installing starship..."
+curl -sS https://starship.rs/install.sh | sh
 
 echo "Done. You may need to restart or re-source your shell config."
