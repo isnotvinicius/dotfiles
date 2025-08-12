@@ -233,5 +233,5 @@ client.background        $base
 
 # Window Gaps
 
-gaps inner 5 
-gaps outer 5
+gaps inner 2 
+gaps outer 2
